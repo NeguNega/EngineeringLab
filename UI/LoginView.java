@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 public class LoginView extends VBox {
 
 
-    private Stage stage;
+    private final Stage stage;
 
     public LoginView(Stage stage) {
         this.stage = stage;
@@ -35,6 +35,8 @@ public class LoginView extends VBox {
         Button signUp = new Button("Sign up");
         login.setOnAction(e -> {
 
+            String username = userNameText.getText();
+
             ChatView chatView = new ChatView();
 
             Scene scene = new Scene(chatView, 600, 400);
@@ -44,6 +46,7 @@ public class LoginView extends VBox {
 
         });
         signUp.setOnAction(e -> {
+
 
             ChatView chatView = new ChatView();
 

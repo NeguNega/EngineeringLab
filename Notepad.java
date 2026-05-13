@@ -7,7 +7,6 @@ import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-
 import java.io.*;
 import java.util.Optional;
 
@@ -121,9 +120,8 @@ public class Notepad {
         stage.show();
     }
 
-    // =========================
+
     // FILE OPERATIONS
-    // =========================
 
     private static void open(Stage stage, TextArea writingSpace) {
 
@@ -181,6 +179,7 @@ public class Notepad {
             currentFile = file;
             writeToFile(file, textArea);
             updateTitle(stage);
+
         }
     }
 
@@ -221,9 +220,8 @@ public class Notepad {
         stage.close();
     }
 
-    // =========================
+
     // DIALOGS
-    // =========================
 
     static boolean confirm(String message) {
 
@@ -241,9 +239,7 @@ public class Notepad {
         return isSaved || confirm("You have unsaved changes. Continue?");
     }
 
-    // =========================
     // UI HELPERS
-    // =========================
 
     private static void updateTitle(Stage stage) {
 
@@ -256,3 +252,4 @@ public class Notepad {
         stage.setTitle("Notepad - " + name);
     }
 }
+
